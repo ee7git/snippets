@@ -16,9 +16,6 @@ This repository intends to contain snippets files for various programming langua
 Using [Vim Plug](https://github.com/junegunn/vim-plug):
 
 ```vim
-" in your .vimrc
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'ee7git/vim-snippets'
 ```
 
