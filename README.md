@@ -28,11 +28,3 @@ For a faster load:
 " in your .vimrc
 let g:UltiSnipsSnippetDirectories = ['path_to_eevimsnippets_Ultisnips_dir']
 ```
-
-Enhance programming languages snippets:
-
-```vim
-" in your .vimrc
-autocmd FileType javascript UltiSnipsAddFiletypes javascript-node
-autocmd FileType javascript UltiSnipsAddFiletypes javascript-react
-```
