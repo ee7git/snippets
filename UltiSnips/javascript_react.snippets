@@ -1,0 +1,169 @@
+priority -50
+
+snippet ri "import React from 'react'"
+import React from 'react';
+endsnippet
+
+snippet ric "import React, {Component} from 'react'"
+import React, { Component } from 'react';
+endsnippet
+
+snippet riu "import React, {useEffect} from 'react'"
+import React, { useEffect } from 'react';
+endsnippet
+
+snippet rid "import ReactDOM from 'react-dom'"
+import ReactDOM from 'react-dom';
+endsnippet
+
+snippet "rir(s)?" "import {BrowserRouter, Router, [Switch]} from 'react-router-dom'" r
+import { BrowserRouter as Router, Route`!p snip.rv = ", Switch" if match.group(1) is not None else ""` } from 'react-router-dom';
+endsnippet
+
+snippet rig "import useglobal from '...'"
+import useGlobal from '${1:./store}';
+endsnippet
+
+snippet rug "const [gState, gActions] = useGlobal();"
+const [gState, gActions] = useGlobal();
+endsnippet
+
+snippet rcs "create global hook store"
+import React from "react;      
+import useGlobalHook from "use-global-hook";
+import * as actions from "${1:../actions}"; 
+
+const initialState = {$2};
+
+const useGlobal = useGlobalHook(React, initialState, actions);
+
+export default useGlobal;
+endsnippet
+
+snippet rca "create action"
+const ${1:function_name} = ({ state, setState }) => {$2};
+
+export default { `!p snip.rv = t[1]` }; 
+endsnippet
+
+snippet rexc "export const ... = ... ;"
+export const $1 = $2;
+endsnippet
+
+snippet cdm
+componentDidMount() {
+	${1}
+}
+endsnippet
+
+snippet cdup
+componentDidUpdate(prevProps, prevState) {
+	${1}
+}
+endsnippet
+
+snippet cwm
+componentWillMount() {
+	${1}
+}
+endsnippet
+
+snippet cwr
+componentWillReceiveProps(nextProps) {
+	${1}
+}
+endsnippet
+
+snippet cwun
+componentWillUnmount() {
+	${1}
+}
+endsnippet
+
+snippet cwu
+componentWillUpdate(nextProps, nextState) {
+	${1}
+}
+endsnippet
+
+snippet fup
+forceUpdate(${1:callback});
+endsnippet
+
+snippet dp
+static defaultProps = {
+	${1}: ${2},
+}
+endsnippet
+
+snippet rst "state = {...}"
+state = {
+	${1}: ${2},
+}
+endsnippet
+
+snippet pt
+static propTypes = {
+	${1}: React.PropTypes.${2:type},
+}
+endsnippet
+
+snippet rcc
+class ${1:ClassName} extends React.Component {
+	render() {
+		return (
+			${0:<div />}
+		);
+	}
+}
+endsnippet
+
+snippet rdr
+ReactDOM.render(${1}, ${2})
+endsnippet
+
+snippet ercc
+export default class ${1:ClassName} extends React.Component {
+	render() {
+		return (
+			${0:<div />}
+		);
+	}
+}
+endsnippet
+
+snippet ctor
+constructor() {
+	super();
+	${1}
+}
+endsnippet
+
+snippet ren "render() { return (...);}"
+render() {
+	return (
+		${1:<div />}
+	);
+}
+endsnippet
+
+snippet rsst "this.setState({...})"
+this.setState({
+	${1}: ${2}
+});
+endsnippet
+
+snippet scu
+shouldComponentUpdate(nextProps, nextState) {
+	${1}
+}
+endsnippet
+
+snippet prp "this.props. ..."
+this.props.${1}
+endsnippet
+
+snippet rstg "this.state. ..."
+this.state.${1}
+endsnippet
+
