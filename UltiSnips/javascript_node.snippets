@@ -1,0 +1,22 @@
+priority -50
+
+# Express snippets
+
+snippet rr "require/response arrow fun"
+(req, res) => {$1}
+endsnippet
+
+snippet arr "require/response arrow fun"
+async (req, res) => {$1}
+endsnippet
+
+# Express "e" - App/Route "([ar])" - Async/Sync/Nothing req,res "([asn])" - pUblic/pRivate "([ur])"
+snippet "e([ar])([asn])([ur])(\w+)" "express METHOD" br
+// @route   `!p snip.rv = match.group(4).upper() + " " + t[1]`
+// @desc    ${2:Description}
+// @access  `!p snip.rv = "Public" if match.group(3) == "u" else "Private"`
+ `!p snip.rv = "app" if match.group(1) == "a" else "route" `.`!p snip.rv = match.group(4).lower()`('${1}', `!p snip.rv = "async (req, res) => {" if match.group(2) == "a" else "(req, res) => {" if match.group(2) == "s" else ""`${3}`!p snip.rv = "" if match.group(2) == "n" else "}"`);
+endsnippet
+
+
+
