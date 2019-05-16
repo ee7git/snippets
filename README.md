@@ -16,7 +16,7 @@ This repository intends to contain snippets files for various programming langua
 Using [Vim Plug](https://github.com/junegunn/vim-plug):
 
 ```vim
-Plug 'ee7git/vim-snippets'
+Plug 'ee7git/snippets'
 ```
 
 For a faster load:
